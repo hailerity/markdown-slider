@@ -1,0 +1,5 @@
+- slide_num = 5
+- @slide[:slides].each_with_index do |slide, index|
+  .slide-content
+    = render :inline => slide[:html]
+  %hr

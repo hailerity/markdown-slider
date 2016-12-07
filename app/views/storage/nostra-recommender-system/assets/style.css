@@ -1,0 +1,37 @@
+/**
+ * Style for Nostra Recommender System Slide
+ * @author Hai Le (hailerity)
+ * @email hailerity@gmail.com
+ */
+
+/** Slide content **/
+h1 {
+  margin-bottom: 30px;
+}
+.slide-content {
+  width: 500px;
+  margin: auto auto;
+}
+
+/** Specific style for each slide **/
+.slide-content.slide-0 {
+  width: 100%;
+}
+
+.slide-content.slide-0 {
+  width: 100%;
+}
+
+.slide-content.slide-5 {
+  width: 100%;
+  text-align: center;
+}
+
+.slide-content.slide-7 {
+  width: 100%;
+  text-align: center;
+}
+
+.slide-content.slide-8 {
+  width: 700px;
+}

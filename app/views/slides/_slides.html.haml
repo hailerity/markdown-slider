@@ -1,0 +1,15 @@
+#carousel-slider.carousel.slide{"data-ride" => "carousel"}
+  %ol.carousel-indicators
+    - (0..@slide[:slides].size-1).each do |index|
+      %li{"data-slide-to" => index, "data-target" => "#carousel-slider", :class => (index == @slide_index) ? 'active' : nil}
+  .carousel-inner{:role => "listbox"}
+    - @slide[:slides].each_with_index do |slide, index|
+      .carousel-item{:class => (index == @slide_index) ? 'active' : nil}
+        .slide-content{:class => "slide-#{index}"}
+          = render :inline => slide[:html]
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-slider", :role => "button"}
+    %span.icon-prev{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-slider", :role => "button"}
+    %span.icon-next{"aria-hidden" => "true"}
+    %span.sr-only Next
