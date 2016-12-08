@@ -1,14 +1,3 @@
-.main-content
-  - if @slide
-    :css
-      #{@slide[:css]}
-    :javascript
-      #{@slide[:script]}
-    - if @slide_index == 'all'
-      .page-wrapper
-        = render :partial => 'page'
-    - else
-      .slide-wrapper
-        = render :partial => 'slides'
-  - else
-    = @error
+%form{:method => 'GET', :action => select_slide_path}
+  %input{:type => 'text', :name => 'slide_path', :placeholder => 'Input slide path here'}
+  %input{:type => 'submit', :value => 'View'}
